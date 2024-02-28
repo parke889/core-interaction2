@@ -1,15 +1,23 @@
 body {
+    animation: transitionIn 2.5s;
     background-color: black ;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
 .navigation-container {
     display: flex;
-    position: fixed;
-    top: 50%;
-    left: 59%;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
+    width: 1500px;
 
 
 }
@@ -35,11 +43,12 @@ body {
 }
 
 .title {
+    animation: titleAni 3s;
     overflow: hidden;
-    display: ;
     position: absolute;
     width: 100%;
     height: 100%;
+    background-color: rgba(240, 248, 255, 0);
     color: black;
     font-family: sans-serif;
     font-weight: lighter;
@@ -47,9 +56,10 @@ body {
     
 }
 
+
 .in {
     position: relative;
-    top:-120px;
+    top:-73px;
 }
 
 
@@ -80,5 +90,27 @@ body {
     }
     to {
         opacity:1;
+    }
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+}
+
+@keyframes titleAni {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
     }
 }
