@@ -7,6 +7,63 @@
   }
 
 
+
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    z-index: 10;
+  }
+  .title {
+    position: fixed;
+    left: 46vw;
+    top: 33vh;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+  }  
+  .title1 {
+    position: fixed;
+    right: 10vw;
+    top: 40vh;
+    font-size: 5em;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+  }  
+  .previous p {
+    position: fixed;
+    left: .1vw;
+    bottom: 2vh;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+  }
+  .next p {
+    position: fixed;
+    right: .1vw;
+    bottom: 2vh;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+  }
+
+  nav h1{
+    position: fixed;
+    right: .22em;
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+
+
+
+
   p {
     font-size: 1em;
     text-align: justify;
@@ -14,6 +71,9 @@
     padding: 5em;
     margin-bottom: 1em;
   }
+
+
+
 
   #flashlight {
     --Xpos: 50vw;
@@ -32,7 +92,8 @@
     );
   }
   @media screen and (min-width: 800px) {
-    body {
+    p {
       font-size: 24px;
     }
+
   }
