@@ -69,11 +69,55 @@ body {
     top:-73px;
 }
 
-.intro {
-    position: relative;
-    top: -73px;
+.contents-container {
+    position: absolute;
+    z-index: 333;
+    font-size: 260px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:link {
+    text-shadow: 30px 30px 30px black;
+    color: rgba(240, 248, 255, 0);
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 20px 20px 20px black;
+    color: rgba(240, 248, 255, 0);
 }
 
+.entryone {
+    position: relative;
+    top:-236px;
+    left: 0px;
+}
+
+
+.entrytwo {
+    position: relative;
+    top:-136px;
+    left: 17px;
+}
+.entrythree{
+    position: relative;
+    top:-30px;
+    left: 97px; 
+}
+
+.entryfour{
+    position: relative;
+    top:160px;
+    left: 40px; 
+}
+
+
+.entryfive{
+    position: relative;
+    top:270px;
+    right: -210px; 
+}
 
 .the {
     position: relative;
