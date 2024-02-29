@@ -70,6 +70,7 @@ body {
 }
 
 .contents-container {
+    
     position: absolute;
     z-index: 333;
     font-size: 260px;
@@ -128,7 +129,7 @@ a:hover {
 .of {
     position: relative;
     bottom: 130px;
-    right: -449px;
+    right: -430px;
 }
 
 .praise {
@@ -139,7 +140,7 @@ a:hover {
 .shadows {
     position: relative;
     bottom: -240px;
-    right: 70px;
+    right: 60px;
 } 
 @keyframes anim {
     from { opacity: 80%;
