@@ -2,16 +2,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: sans-serif;
     cursor: none;
   }
+
+
   p {
     font-size: 1em;
     text-align: justify;
     line-height: 2em;
-    padding: 0 2em;
+    padding: 5em;
     margin-bottom: 1em;
   }
+
   #flashlight {
     --Xpos: 50vw;
     --Ypos: 50vh;
@@ -20,7 +23,7 @@
     content: "";
     display: block;
     width: 100%;
-    height: 100%;
+    height: 250%;
     position: absolute;
     background: radial-gradient(
       circle 9em at var(--Xpos) var(--Ypos),
