@@ -29,7 +29,7 @@ nav h1{
   letter-spacing: 2px;
   margin: 0;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.531);
 }
 
 .parallax {
