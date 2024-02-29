@@ -1,137 +1,169 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: rgb(0, 0, 0);
+  min-height: 100vh;
+
+}
+
+
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  z-index: 10;
+}
+nav h1{
+  position: fixed;
+  right: .22em;
+  font-size: 3em;
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.parallax {
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  min-height: 788px;
+  overflow: hidden;
+}
+
+#text {
+  position: absolute;
+font-size: 3em;
+text-align: center;
+width: 70%;
+height: 50%;
+font-weight: 100;
+color: white;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.463);
+}
+.parallax-container {
+  height: 100vh;
+  background-color: black;
+
+}
+.parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  mix-blend-mode:multiply;
+}
+
+#ink1 {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+
+}
+
+#ink2 {
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
+
+}
+
+#ink3 {
+  animation-name: fadeIn;
+  animation-duration: 7s;
+
+}
+#ink4, #ink5 {
+  animation-name: fadeIn;
+
+  animation-duration: 5s;
+}
+
+
+@keyframes fadeIn {
+  from {
+    
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+.sec {
+  display: flex;
+  background-color: black;
+  position: relative;
+  bottom: -83px;
+}
+
+.one{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% / 2);
+  box-sizing: border-box;
+  height: 3000px;
+} 
+.two {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% / 2);
+  box-sizing: border-box;
+  position: fixed;
+  left: calc(100% / 2);
+  bottom: 0;
+  height: 3000px;
+  padding-bottom: 15vh;
+}
+
+.sec p {
+  font-size: 1em;
+  margin: 20px;
+  color: white;
+  font-weight: 100;
+}
+.previous {
+  left: 2%;
+}
+
+.next {
+  right: 2%;
+}
+
+@media only screen and (max-width: 800px) {
   
-  html {
-    box-sizing: border-box;
-    font-family: -apple-system, arial, sans-serif;
-  }
-  
-  body {
-    animation-name: fadeIn;
-    animation-duration: 2s;
-    display: flex;
-    background: #ccc;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-
-.menubar {
-    position: absolute;
-    top: 2px;
-    margin: 20px;
-    z-index: 10000;
-    text-decoration: none;
-    right: 20px;
-
-  }
-
-
-
-  h1 {
-    font-weight: normal;
-    margin-bottom: 40px;
-    font-size: 24px;
-  }
-  
-
-  p {
-    text-align: left;
-    margin: 0px 0px 2px;
-    width: 100%;
-  }
-
-
-
-  #left {
+  .one {
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-  }
-  
-  #left {
-    left: 0px;
-    padding: 0px;
-    overflow: scroll;
-    mix-blend-mode: multiply;
-  }
-
-  .scroll {
-    background: white;
-    width: 100vw;
-    padding: 40px 80px 40px 40px;
-  }
-  
-  #right {
-    right: 0px;
-    text-align: center;
-    pointer-events: none;
-  }
- 
-  
-  .overflow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    mix-blend-mode: multiply;
-  }
-  
-
-  
-  
-  img {
-    max-width: calc(100% - 80px);
-    max-height: calc(50vh - 80px);
-    width: auto;
     height: auto;
-    margin: 10px;
-  }
-  
-
-  
-  @media only screen and (max-width: 800px) {
-  
-    #left {
-      width: 100vw;
-      height: auto;
-      overflow: hidden;
-      position: relative;
-      top: auto;
-    }
-  
-    .scroll {
-      width: 100vw;
-      padding: 20px;
-    }
-
-  
+    overflow: hidden;
+    position: relative;
+    top: auto;
   }
 
 
-.window-l {
-    height: 50vh;
-    display: block;
-    padding: 0px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky; /* Make the images sticky */
-    top: 0; /* Stick the images to the top */
+  .two {
+    display: none;
+    position: relative;
+    width: 100vw;
+  }
+
+
 }
 
-#left .scroll {
-    position: relative; /* Reset position for the scroll container */
-}
