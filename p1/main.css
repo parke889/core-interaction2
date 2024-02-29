@@ -26,7 +26,7 @@ body {
     flex-wrap: wrap;
     gap: 5px ;
     align-items: center;
-    width: 660px;
+    width: 630px;
     height: 683px;
     border: 10px;
     border-color: black;
@@ -34,13 +34,14 @@ body {
 }
 
 .sq1 {width: 80px;
-    height: 80px;
+    height: 95px;
     background-color: rgba(255, 247, 227);
 }
 
 .sq1:hover {
     animation: anim 1s forwards;
 }
+
 
 .title {
     animation: titleAni 3s;
@@ -56,10 +57,21 @@ body {
     
 }
 
+.navigation-container{
+    position: relative;
+    width: max-content;
+}
+
+
 
 .in {
     position: relative;
     top:-73px;
+}
+
+.intro {
+    position: relative;
+    top: -73px;
 }
 
 

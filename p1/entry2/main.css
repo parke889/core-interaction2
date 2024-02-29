@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-family: -apple-system, arial, sans-serif;
+  }
+  
+  body {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    display: flex;
+    background: #ccc;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+.menubar {
+    position: absolute;
+    top: 2px;
+    margin: 20px;
+    z-index: 10000;
+    text-decoration: none;
+    right: 20px;
+
+  }
+
+
+
+  h1 {
+    font-weight: normal;
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+  
+
+  p {
+    text-align: left;
+    margin: 0px 0px 2px;
+    width: 100%;
+  }
+
+
+
+  #left {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+  #left {
+    left: 0px;
+    padding: 0px;
+    overflow: scroll;
+    mix-blend-mode: multiply;
+  }
+
+  .scroll {
+    background: white;
+    width: 100vw;
+    padding: 40px 80px 40px 40px;
+  }
+  
+  #right {
+    right: 0px;
+    text-align: center;
+    pointer-events: none;
+  }
+ 
+  
+  .overflow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    mix-blend-mode: multiply;
+  }
+  
+
+  
+  
+  img {
+    max-width: calc(100% - 80px);
+    max-height: calc(50vh - 80px);
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  
+
+  
+  @media only screen and (max-width: 800px) {
+  
+    #left {
+      width: 100vw;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+      top: auto;
+    }
+  
+    .scroll {
+      width: 100vw;
+      padding: 20px;
+    }
+
+  
+  }
+
+
+.window-l {
+    height: 50vh;
+    display: block;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky; /* Make the images sticky */
+    top: 0; /* Stick the images to the top */
+}
+
+#left .scroll {
+    position: relative; /* Reset position for the scroll container */
+}
