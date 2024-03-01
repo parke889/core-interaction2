@@ -53,6 +53,45 @@ body
     top: 30dvh;
 }
 
+.bubble2 {
+    position: absolute;
+    left: 30dvw;
+    top: 20dvh;
+}
+
+.bubble3 {
+    position: absolute;
+    left: 70dvw;
+    top: 10dvh;
+}
+
+.bubble4 {
+    position: absolute;
+    left: 10dvw;
+    top: 50dvh;
+}
+
+
+.bubble5 {
+    position: absolute;
+    left: 5dvw;
+    top: 60dvh;
+}
+
+.bubble6 {
+    position: absolute;
+    left: 70dvw;
+    top: 90dvh;
+}
+
+.bubble7 {
+    position: absolute;
+    left: 10dvw;
+    top: 90dvh;
+}
+
+
+
 @keyframes animate
 {
     0%
