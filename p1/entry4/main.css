@@ -9,6 +9,7 @@ body
 {
     min-height: 100vh;
     background-color: black;
+    overflow: hidden;
 }
 
 #section1, #section2, #section3
@@ -158,27 +159,40 @@ p {
 }
 
 a:link {
+    font-family: sans-serif;
+
     text-shadow: 1px 1px 20px rgb(255, 255, 255);
     color: rgba(240, 248, 255, 0);
 
 }
 a:hover {
+    font-family: sans-serif;
     text-shadow: 30px 30px 30px black;
     color: rgb(240, 248, 255);
     text-decoration: none;
 }
 
-header{
+.header{
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: .3em;
     height: 15vh;
-    display: flex;
     z-index: 10;
+    font-size: 2em;
+    right: .22em;
+
   }
+.header a:link{
+    position: fixed;
+    z-index: 10;
+    right: .22em;
+    /* font-size: em; */
+
+
+}
 
   .previous p {
+    font-family: sans-serif;
     position: fixed;
     left: .1vw;
     bottom: 2vh;

@@ -9,6 +9,7 @@ window.addEventListener('scroll', () => {
     ink4.style.left = value *-1.5 + 'px';
     ink5.style.left = value *1.5 + 'px';
     ink1.style.marginTop = value *1.5 + 'px';
+    ink3.style.marginTop = value *2.5 + 'px';
 
     
     

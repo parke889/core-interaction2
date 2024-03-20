@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   min-height: 100vh;
 
 }
@@ -39,7 +39,7 @@ nav h1{
   justify-content: center;
   align-items: center;
   height: 90vh;
-  min-height: 788px;
+  min-height: 900px;
   overflow: hidden;
 }
 
@@ -55,7 +55,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.463);
 }
 .parallax-container {
   height: 100vh;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 
 }
 .parallax img {
@@ -68,26 +68,40 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.463);
 }
 
 #ink1 {
+  /* transform: rotate(180deg); */
+  position: absolute;
+  top: -300px;
   animation-name: fadeIn;
   animation-duration: 2s;
 
 }
 
 #ink2 {
+    transform: rotate(180deg);
+    position: absolute;
+    top: -300px;
   animation-name: fadeIn;
   animation-duration: 2.5s;
 
 }
 
 #ink3 {
+      transform: rotate(180deg);
+    position: absolute;
+    top: -500px;
   animation-name: fadeIn;
   animation-duration: 7s;
 
 }
 #ink4, #ink5 {
   animation-name: fadeIn;
-
   animation-duration: 5s;
+}
+
+#ink4 {
+
+  position:absolute;
+
 }
 
 
@@ -103,11 +117,12 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.463);
 
 .sec {
   display: flex;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
   position: relative;
   bottom: -83px;
 }
-
+xs
 .one{
   background-color: white;
   display: flex;
@@ -119,7 +134,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.463);
   height: 3000px;
 } 
 .two {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +151,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.463);
 .sec p {
   font-size: 1em;
   margin: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 100;
 }
 .previous {
