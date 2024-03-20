@@ -151,10 +151,10 @@ p {
     color: rgba(255, 255, 108, 0.691);
 }
 
-.one:hover {
+.one p:hover {
+    letter-spacing: 20px;
     transition: 1s;
     color: rgba(255, 255, 255, 0.423);
-    letter-spacing: 300px;
     text-shadow: 10px 10px 10px rgba(255, 255, 255, 0.599);
 }
 
@@ -186,17 +186,22 @@ a:hover {
     position: fixed;
     z-index: 10;
     right: .22em;
-    /* font-size: em; */
 
 
 }
 
-  .previous p {
+  .back {
     font-family: sans-serif;
-    position: fixed;
-    left: .1vw;
-    bottom: 2vh;
-    font-size: 1em;
+    bottom: 1px;
+    font-size: 1.6em;
+    right: .22em;
     text-align: center;
     color: white;
+    display: hidden;
   }  
+
+  .back:hover {
+    display: block;
+    letter-spacing: 0;
+  }
+
