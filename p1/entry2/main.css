@@ -117,7 +117,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.463);
 
 .sec {
   display: flex;
-  gap: 50px;
+  gap: 55px;
   background-color: rgb(255, 255, 255);
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
   position: relative;
@@ -133,6 +133,7 @@ xs
   width: 50%;
   box-sizing: border-box;
   height: 3000px;
+
 } 
 .two {
   background-color: rgb(255, 255, 255);
@@ -152,6 +153,7 @@ xs
   margin: 20px;
   color: rgb(0, 0, 0);
   font-weight: 100;
+  max-width: 40rem;
 }
 .previous {
   left: 2%;
