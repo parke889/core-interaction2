@@ -1,6 +1,7 @@
 body {
     animation: transitionIn 2.5s;
     background-color: black ;
+    overflow: hidden;
 
 }
 
