@@ -21,10 +21,10 @@ body{
 }
 .project1{
     width: 30vw;
-    height: 100%vh;
+    height: 370px;
     min-width: 200px;
     min-height: 200px;
-    background-color: #000000;
+    background-color: #ffffff;
     transition: 1s ease;
     border-radius: 10%;
 }
@@ -35,7 +35,7 @@ body{
     min-width: 200px;
     min-height: 200px;
     transition: 1s ease;
-    background-color: #ffc1c1;
+    background-color: #ffffff;
     border-radius: 10%;
 
 }
@@ -46,7 +46,7 @@ body{
     transition: 1s ease;
     border-radius: 10%;
 
-    background-color: #ff7575;
+    background-color: #ffffff;
 }
 
 .title {
@@ -60,5 +60,34 @@ body{
 .project1:hover, .project2:hover, .project3:hover{
     transform: rotate(360deg);
     border-radius: 100%;
+    background-color: black;
 }
 
+.project1:hover p{
+    display: block;
+    color: white;
+}
+
+.project2:hover p{
+    display: block;
+    color: white;
+
+}
+
+
+.project3:hover p{
+    display: block;
+    color: white;
+
+}
+
+@media (max-width: 768px) {
+    .project1 {
+        width: 200px;
+        height: 200px;
+
+    }
+}
+p {
+    display: none;
+}
