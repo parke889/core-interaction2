@@ -1,0 +1,274 @@
+*,*:before,*:after {
+    box-sizing: border-box
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    width: 100%
+}
+
+body {
+    transition: ease-in 4s;
+    width: 100%;
+    margin: 0;
+    font: 16px/1 sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased
+}
+
+h1,h2,h3,h4,p,blockquote,figure,ol,ul,hr {
+    margin: 0;
+    padding: 0
+}
+
+hr {
+    border: none
+}
+
+main {
+    display: block
+}
+
+h1,h2,h3,h4 {
+    font-weight: normal;
+    font-size: inherit
+}
+
+strong {
+    font-weight: bold
+}
+
+a {
+    color: inherit
+}
+
+a {
+    text-decoration: none
+}
+
+::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+*:focus {
+    outline: 0
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0
+}
+
+iframe {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+        height: 24px
+    }
+
+    99.99% {
+        opacity: 0;
+        height: 24px
+    }
+
+    100% {
+        opacity: 0;
+        height: 0
+    }
+}
+
+[data-preventdefault] *,a * {
+    pointer-events: none
+}
+
+[data-media] {
+    display: none
+}
+
+@media only screen and (max-width: 900px) {
+    [data-media=mobile-tablet] {
+        display:block
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    [data-media=laptop-desktop] {
+        display:block
+    }
+}
+
+[x-cloak] {
+    display: none
+}
+
+html {
+    letter-spacing: 0;
+    font-size: 18px
+}
+
+@media only screen and (min-width: 901px)and (max-width: 1400px) {
+    html {
+        font-size:17px
+    }
+}
+
+@media only screen and (min-width: 601px)and (max-width: 900px) {
+    html {
+        font-size:16px
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size:15px
+    }
+}
+
+body {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Times New Roman","Times",serif;
+    line-height: 1.2;
+    font-size: 1rem;
+    color: #000;
+    background-color: #fff
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    scrollbar-width: 24px;
+    scrollbar-color: hsl(0deg, 0%, 0%) transparent
+}
+
+main::-webkit-scrollbar {
+    width: 24px;
+    height: 24px
+}
+
+main::-webkit-scrollbar-thumb {
+    background: hsl(0deg, 0%, 0%)
+}
+
+main::-webkit-scrollbar-track {
+    background: transparent
+}
+
+
+@media only screen and (max-width: 900px) {
+    nav#about-drawer {
+        bottom:0
+    }
+}
+
+
+
+@media only screen and (min-width: 901px)and (max-width: 1400px) {
+    div#details-drawer-content section>div.description {
+        -moz-columns:2;
+        columns: 2
+    }
+}
+
+@media only screen and (min-width: 1401px) {
+    div#details-drawer-content section>div.description {
+        -moz-columns:3;
+        columns: 3
+    }
+}
+
+
+.mosaic {
+    height: 100vh;
+    background-color: #000
+}
+
+section.mosaic-segment {
+    display: grid;
+    width: 100%;
+    height: 100%
+}
+
+section.mosaic-segment[data-axis=y] {
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr
+}
+
+section.mosaic-segment[data-axis=x] {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr
+}
+
+section.mosaic-segment div {
+    height: var(--h)
+}
+
+section.mosaic-segment img {
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background-color: #000;
+    transition: opacity .5s
+}
+
+section.mosaic-segment span {
+    display: inline-block;
+    background-image: linear-gradient(to right, hsl(0deg, 0%, 50%), var(--g1));
+    color: rgba(0,0,0,0);
+    transition: color .5s,background .5s
+}
+
+section.mosaic-segment a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: url('data:image/svg+xml;utf8,<svg height="30" width="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"><circle cx="50" cy="50" r="50"/></svg>') 15 15,pointer;
+    background-color: var(--g1);
+    background-image: linear-gradient(to bottom, var(--g0), var(--g1))
+}
+
+section.mosaic-segment a[data-orientation=landscape] {
+    background-image: linear-gradient(to right, var(--g0), var(--g1))
+}
+
+section.mosaic-segment a[data-fontsize=xxl] {
+    font-size: 4rem
+}
+
+section.mosaic-segment a[data-fontsize=xl] {
+    font-size: 3.2rem
+}
+
+section.mosaic-segment a[data-fontsize=l] {
+    font-size: 2.4rem
+}
+
+section.mosaic-segment a:hover img {
+    opacity: 1;
+    transition: opacity 0s
+}
+
+section.mosaic-segment a:hover span {
+    background-image: none;
+    color: #1a1a1a;
+    transition: color 0s,background .5s
+}
+
