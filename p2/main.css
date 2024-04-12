@@ -353,15 +353,6 @@ a, p {
     color: red;
 }
 
-.item:hover + .p {
-    animation: titlewhite .5s forwards; /* Added animation duration and easing */
-}
-
-@keyframes titlewhite {
-    from {
-        transform: scale(1); /* Changed scale to transform */
-    }    
-    to {
-        transform: scale(1.5); /* Changed scale to transform */
-    }
+.item:hover + .item p {
+    color: white;
 }
