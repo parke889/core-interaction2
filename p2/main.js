@@ -182,11 +182,11 @@ const items =
             "selected": true
         },
         {
-            "title": "Movie",
+            "title": "The Lobster",
             "page": "css.html",
-            "img": 'getout.jpg',
+            "img": 'the lobster.jpg',
             // "category": ["thriller"],
-            "time": 2022,
+            "time": 2015,
             "selected": true
         },
         {
