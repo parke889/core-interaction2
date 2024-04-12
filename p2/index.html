@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+
 
 </head>
 <body>
@@ -273,6 +275,29 @@
                 </div>
             </section>
         </div>
+
+    <list>
+            <h1>Cinematic Canvas</h1>
+            <div id="controls">
+                <div class="row-flexbox">
+                    <label for="selected-filter">Show:</label>
+                    <select id="selected-filter">
+                        <option value="all">All Tasks</option>
+                        <option value="completed">Selected Movies</option>
+                        <option value="incomplete">Incomplete Tasks</option>
+                    </select>
+                </div>
+                <div class="row-flexbox">
+                    <label for="time-filter">Time:</label>
+                    <input type="range" id="time-filter" min="1970" max="2020" step="10"
+                        value="0">
+                    <output for="time-filter">0</output>-  2024
+                </div>
+            </div>
+            <div id="toolbox"></div>
+    </list>
     </main>
+
+    
 </body>
 </html>

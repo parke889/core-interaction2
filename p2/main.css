@@ -2,6 +2,7 @@
     box-sizing: border-box
 }
 
+
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -9,7 +10,6 @@ html {
 }
 
 body {
-    transition: ease-in 4s;
     width: 100%;
     margin: 0;
     font: 16px/1 sans-serif;
@@ -17,10 +17,7 @@ body {
     -webkit-font-smoothing: antialiased
 }
 
-h1,h2,h3,h4,p,blockquote,figure,ol,ul,hr {
-    margin: 0;
-    padding: 0
-}
+
 
 hr {
     border: none
@@ -28,6 +25,7 @@ hr {
 
 main {
     display: block
+
 }
 
 h1,h2,h3,h4 {
@@ -140,7 +138,7 @@ body {
     line-height: 1.2;
     font-size: 1rem;
     color: #000;
-    background-color: #fff
+    background-color: #000000
 }
 
 main {
@@ -156,12 +154,13 @@ main {
 }
 
 main::-webkit-scrollbar {
+    position:absolute;
     width: 24px;
     height: 24px
 }
 
 main::-webkit-scrollbar-thumb {
-    background: hsl(0deg, 0%, 0%)
+    background: hsl(0, 0%, 100%)
 }
 
 main::-webkit-scrollbar-track {
@@ -249,18 +248,6 @@ section.mosaic-segment a[data-orientation=landscape] {
     background-image: linear-gradient(to right, var(--g0), var(--g1))
 }
 
-section.mosaic-segment a[data-fontsize=xxl] {
-    font-size: 4rem
-}
-
-section.mosaic-segment a[data-fontsize=xl] {
-    font-size: 3.2rem
-}
-
-section.mosaic-segment a[data-fontsize=l] {
-    font-size: 2.4rem
-}
-
 section.mosaic-segment a:hover img {
     opacity: 1;
     transition: opacity 0s
@@ -272,3 +259,96 @@ section.mosaic-segment a:hover span {
     transition: color 0s,background .5s
 }
 
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 2rem;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+span {
+    display: flex;
+    background: rgba(0, 0, 0, 0.408);
+    padding: .4rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+#toolbox {
+    justify-content: center;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.row-flexbox {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item {
+    background-color: #000000;
+    padding: 20;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.completed {
+    background: lightgreen;
+}
+
+.item img {
+    aspect-ratio: 1/1;
+    justify-content: stretch;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.list {
+    display: block;
+    margin-top: 22em;
+}
+
+a, p {
+    position: relative;
+    bottom: 2rem;
+    color: #000;
+}
+
+.item a{
+    font-size: 30px;
+    top: -14rem;
+    right: -8.5rem;
+}
+
+.item a:hover {
+    color: red;
+}
