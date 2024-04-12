@@ -341,7 +341,10 @@ span {
 a, p {
     position: relative;
     bottom: 2rem;
-    color: #000;
+    color: #ffffff;
+}
+a {
+    color: black;
 }
 
 .item a{
@@ -354,6 +357,3 @@ a, p {
     color: red;
 }
 
-.item:hover + .item p {
-    color: white;
-}
