@@ -262,13 +262,3 @@ function initializeEventListeners() {
 initializeEventListeners();
 renderItems();
 
-const item = document.querySelector('.item');
-
-item.addEventListener('mouseenter', () => {
-    // Change styles of other element when item is hovered
-});
-
-item.addEventListener('mouseleave', () => {
-    // Revert styles of other element when item is not hovered
-    otherElement.style.color = ''; // Resets to default
-});
