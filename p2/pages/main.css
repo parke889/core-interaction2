@@ -1,0 +1,123 @@
+body{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: black;
+
+}
+.project-list{
+    width: 100%;
+    justify-self: center;
+    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120%;
+    text-align: center;
+}
+.project1, .project2, .project3 {
+    margin: 10px;
+}
+
+.project1 {
+    width: 30vw;
+    height: 370px;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: #ffffff;
+    transition: 1s ease;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.still1 {
+    width: 100%;
+    height: auto;
+}
+
+.project2 {
+    width: 30vw;
+    height: 370px;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: #ffffff;
+    transition: 1s ease;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.still2{
+    width: 100%;
+    height: auto;
+}
+
+.project3 {
+    width: 30vw;
+    height: 370px;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: #ffffff;
+    transition: 1s ease;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.still3 {
+    width: 100%;
+    height: auto;
+}
+.title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 300%;
+    margin: 2rem;
+    color: white;
+
+}
+
+.project1:hover, .project2:hover, .project3:hover{
+    transform: scale(1.1);
+    border-radius: 20%;
+    background-color: rgb(98, 98, 98);
+}
+
+.project1:hover p{
+    display: block;
+    color: white;
+}
+
+.project2:hover p{
+    display: block;
+    color: white;
+
+}
+
+
+.project3:hover p{
+    display: block;
+    color: white;
+
+}
+
+@media (max-width: 768px) {
+    .project1 {
+        width: 200px;
+        height: 200px;
+
+    }
+}
+p {
+    display: none;
+} 

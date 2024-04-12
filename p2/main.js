@@ -2,7 +2,7 @@ const items =
     [
         {
             "title": "Dicision to Leave",
-            "page": "html.html",
+            "page": "index.html",
             // "category": ["Romance"],
             "img": 'Dicision to Leave.jpeg',
             "time": 2022,
@@ -11,7 +11,7 @@ const items =
         },
         {
             "title": "Get Out",
-            "page": "css.html",
+            "page": "getout.html",
             "img": 'getout.jpg',
             // "category": ["thriller"],
             "time": 2017,
