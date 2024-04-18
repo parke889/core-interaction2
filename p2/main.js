@@ -11,7 +11,7 @@ const items =
         },
         {
             "title": "Get Out",
-            "page": "getout.html",
+            "page": "",
             "img": 'getout.jpg',
             // "category": ["thriller"],
             "time": 2017,
@@ -19,7 +19,7 @@ const items =
         },
         {
             "title": "Eternal Sunshine",
-            "page": "css.html",
+            "page": "eternal.html",
             "img": 'Eternal Sunshine.jpg',
             // "category": ["thriller"],
             "time": 2004,
