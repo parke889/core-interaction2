@@ -244,17 +244,7 @@ function renderItems() {
     });
 }
 
-function toggleSelected(element) {
-    // Find the index of the item in the items array based on its title
-    const title = element.querySelector('p').textContent;
-    const itemIndex = items.findIndex(item => item.title === title);
-    
-    // Toggle the "selected" property of the item between true and false
-    items[itemIndex].selected = !items[itemIndex].selected;
 
-    // Update the class of the element to reflect the new selection state
-    element.classList.toggle('selected', items[itemIndex].selected);
-}
 
 
 
@@ -301,3 +291,4 @@ function generateItem(item) {
         </div>
     `;
 }
+
