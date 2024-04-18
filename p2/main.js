@@ -105,7 +105,7 @@ const items =
             "img": 'bat.jpg',
             // "category": ["thriller"],
             "time": 1962,
-            "selected": true
+            "selected": false
         },
         {
             "title": "Lady Vengeance",
@@ -113,7 +113,7 @@ const items =
             "img": 'Lady Vengeance.jpeg',
             // "category": ["thriller"],
             "time": 2005,
-            "selected": true
+            "selected": false
         },
         {
             "title": "Titanic",
@@ -121,7 +121,7 @@ const items =
             "img": 'titanic.jpg',
             // "category": ["thriller"],
             "time": 1997,
-            "selected": true
+            "selected": false
         },
         {
             "title": "Happy Together",
@@ -169,7 +169,7 @@ const items =
             "img": 'US(2019).jpeg',
             // "category": ["thriller"],
             "time": 2019,
-            "selected": true
+            "selected": false
         },
         {
             "title": "Call Me By Your Name",
@@ -185,7 +185,7 @@ const items =
             "img": 'about time.jpeg',
             // "category": ["thriller"],
             "time": 2013,
-            "selected": true
+            "selected": false
         },
         {
             "title": "The Lobster",
@@ -201,7 +201,7 @@ const items =
             "img": 'Old Boy(2003)-1.jpeg',
             // "category": ["thriller"],
             "time": 2003,
-            "selected": true
+            "selected": false
         },
         
 
@@ -290,3 +290,15 @@ function generateItem(item) {
     `;
 }
 
+function generateItem(item) {
+    const isSelected = item.selected ? 'selected' : '';
+    const plusSign = item.selected ? '⊕' : ' '; // Here we choose the character based on the value of "selected"
+    return `
+        <div class="item ${isSelected}" onclick="toggleSelected(this)">
+            ${item.img ? `<img src="imgs/${item.img}" alt="${item.title}" style="${isSelected ? 'filter: drop-shadow(3px 3px 3px red);' : ''}">` : ''}
+            <p>${item.title} (${item.time}) </p>
+            ${item.category ? item.category.map(tag => `<span>${tag}</span>`).join('') : ''}
+            ${item.page ? `<a href="./pages/${item.page}">${plusSign}</a>` : ''}
+        </div>
+    `;
+}
