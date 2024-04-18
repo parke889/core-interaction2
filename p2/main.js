@@ -219,6 +219,7 @@ let showCategory = 'all';
 let minTime = 0;
 
 function generateItem(item) {
+    
     return `
         <div class="item ${item.selected ? 'selected' : ''}" onclick="toggleSelected(this)">
             ${item.img ? `<img src="imgs/${item.img}" alt="${item.title}">` : ''}
@@ -227,6 +228,7 @@ function generateItem(item) {
             ${item.page ? `<a href="./pages/${item.page}">⊕</a>` : ''}
         </div>
     `;
+    
 }
 
 
@@ -293,38 +295,16 @@ function generateItem(item) {
     `;
 }
 
-// Select the popup and info elements
-const popup = document.querySelector('.popup');
-const infoContainer = document.querySelector('.info');
 
-// Add click event listeners to each image
-itemImages.forEach(image => {
-    image.addEventListener('click', () => {
-        // Retrieve the index of the clicked item from the data-info attribute
-        const dataIndex = image.parentElement.getAttribute('data-info');
-        const selectedItem = items[dataIndex];
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownArrow = document.querySelector('.dropdown-arrow');
+    const note = document.querySelector('.note');
 
-        // Generate HTML to display the item's information
-        const infoHTML = `
-            <h2>${selectedItem.title}</h2>
-            <p>Time: ${selectedItem.time}</p>
-            <p>Page: ${selectedItem.page ? selectedItem.page : 'N/A'}</p>
-            ${selectedItem.category ? `<p>Category: ${selectedItem.category.join(', ')}</p>` : ''}
-        `;
-
-        // Update the info container with the generated HTML
-        infoContainer.innerHTML = infoHTML;
-
-        // Show the popup
-        popup.style.display = 'block';
+    dropdownArrow.addEventListener('click', function() {
+        // Toggle the visibility of the note
+        note.style.display = note.style.display === 'none' ? 'block' : 'none';
+        
+        // Toggle the rotated class to rotate the arrow
+        dropdownArrow.classList.toggle('rotated');
     });
 });
-
-// Function to close the popup when clicked outside
-window.addEventListener('click', (event) => {
-    if (event.target === popup) {
-        popup.style.display = 'none';
-    }
-});
-
-
