@@ -60,7 +60,7 @@ const items =
         },
         {
             "title": "Memento",
-            "page": "javascript.html",
+            "page": "page.html",
             "img": 'memento.jpg',
             // "category": ["romance", "sci-fi"],
             "time": 2000,
@@ -76,7 +76,7 @@ const items =
         },
         {
             "title": "The Notebook",
-            "page": "javascript.html",
+            "page": "page.html",
             "img": 'the notebook.jpeg',
             // "category": ["romance"],
             "time": 2004,
@@ -85,7 +85,7 @@ const items =
 
         {
             "title": "Moonrise Kingdom",
-            "page": "css.html",
+            "page": "moon.html",
             "img": 'the moonrise kingdom4.jpeg',
             // "category": ["thriller"],
             "time": 2012,
@@ -93,15 +93,15 @@ const items =
         },
         {
             "title": "The Grand Budapest Hotel",
-            "page": "css.html",
+            "page": "page.html",
             "img": 'grand budapest.jpeg',
             // "category": ["thriller"],
             "time": 2014,
-            "selected": true
+            "selected": false
         },
         {
             "title": "Breakfast at Tiffany's",
-            "page": "css.html",
+            "page": "page.html",
             "img": 'bat.jpg',
             // "category": ["thriller"],
             "time": 1962,
@@ -109,7 +109,7 @@ const items =
         },
         {
             "title": "Lady Vengeance",
-            "page": "css.html",
+            "page": "page.html",
             "img": 'Lady Vengeance.jpeg',
             // "category": ["thriller"],
             "time": 2005,
@@ -117,7 +117,6 @@ const items =
         },
         {
             "title": "Titanic",
-            "page": "css.html",
             "img": 'titanic.jpg',
             // "category": ["thriller"],
             "time": 1997,
@@ -125,7 +124,7 @@ const items =
         },
         {
             "title": "Happy Together",
-            "page": "css.html",
+            "page": "happy.html",
             "img": 'happy together.jpg',
             // "category": ["thriller"],
             "time": 1997,
@@ -133,7 +132,7 @@ const items =
         },
         {
             "title": "Inception",
-            "page": "javascript.html",
+            "page": "page.html",
             "img": 'inception.jpg',
             // "category": ["romance", "sci-fi"],
             "time": 2010,
@@ -141,7 +140,7 @@ const items =
         },
         {
             "title": "The Devil Wears Prada",
-            "page": "javascript.html",
+            "page": "page.html",
             "img": 'devil.jpg',
             // "category": ["romance"],
             "time": 2006,
@@ -149,23 +148,23 @@ const items =
         },
         {
             "title": "Flipped",
-            "page": "javascript.html",
+            "page": "flipped.html",
             "img": 'flipped2.jpeg',
             // "category": ["romance"],
             "time": 2010,
-            "selected": false
-        },
-        {
-            "title": "Her",
-            "page": "css.html",
-            "img": 'her.jpeg',
-            // "category": ["thriller"],
-            "time": 2013,
             "selected": true
         },
         {
+            "title": "Her",
+            "page": "page.html",
+            "img": 'her.jpeg',
+            // "category": ["thriller"],
+            "time": 2013,
+            "selected": false
+        },
+        {
             "title": "Us",
-            "page": "css.html",
+            "page": "page.html",
             "img": 'US(2019).jpeg',
             // "category": ["thriller"],
             "time": 2019,
@@ -173,7 +172,7 @@ const items =
         },
         {
             "title": "Call Me By Your Name",
-            "page": "css.html",
+            "page": "callme.html",
             "img": 'callmebyyourname(2017)-2.jpeg',
             // "category": ["thriller"],
             "time": 2017,
@@ -189,7 +188,7 @@ const items =
         },
         {
             "title": "The Lobster",
-            "page": "css.html",
+            "page": "lobster.html",
             "img": 'the lobster.jpg',
             // "category": ["thriller"],
             "time": 2015,
