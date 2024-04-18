@@ -11,7 +11,7 @@ const items =
         },
         {
             "title": "Get Out",
-            "page": "",
+            "page": "page.html",
             "img": 'getout.jpg',
             // "category": ["thriller"],
             "time": 2017,
@@ -28,7 +28,7 @@ const items =
 
         {
             "title": "Léon",
-            "page": "css.html",
+            "page": "leon.html",
             "img": 'leon2.jpeg',
             // "category": ["thriller"],
             "time": 1994,
@@ -36,7 +36,7 @@ const items =
         },
         {
             "title": "Saltburn",
-            "page": "css.html",
+            "page": "saltburn.html",
             "img": 'saltburn.jpeg',
             // "category": ["thriller"],
             "time": 2023,
@@ -44,7 +44,7 @@ const items =
         },
         {
             "title": "The Handmaiden",
-            "page": "css.html",
+            "page": "handmaiden.html",
             "img": '아가씨(2016).png',
             // "category": ["thriller"],
             "time": 2016,
@@ -52,7 +52,7 @@ const items =
         },
         {
             "title": "Fallen Angels",
-            "page": "javascript.html",
+            "page": "fallen.html",
             "img": 'fallen angels.jpg',
             // "category": ["romance"],
             "time": 1995,
