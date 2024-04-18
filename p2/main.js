@@ -15,7 +15,7 @@ const items =
             "img": 'getout.jpg',
             // "category": ["thriller"],
             "time": 2017,
-            "selected": true
+            "selected": false
         },
         {
             "title": "Eternal Sunshine",
@@ -60,6 +60,7 @@ const items =
         },
         {
             "title": "Memento",
+            "page": "javascript.html",
             "img": 'memento.jpg',
             // "category": ["romance", "sci-fi"],
             "time": 2000,
@@ -67,6 +68,7 @@ const items =
         },
         {
             "title": "Parasite",
+            "page": "javascript.html",
             "img": 'parasite2.jpeg',
             // "category": ["romance"],
             "time": 2019,
@@ -74,6 +76,7 @@ const items =
         },
         {
             "title": "The Notebook",
+            "page": "javascript.html",
             "img": 'the notebook.jpeg',
             // "category": ["romance"],
             "time": 2004,
@@ -130,6 +133,7 @@ const items =
         },
         {
             "title": "Inception",
+            "page": "javascript.html",
             "img": 'inception.jpg',
             // "category": ["romance", "sci-fi"],
             "time": 2010,
@@ -137,6 +141,7 @@ const items =
         },
         {
             "title": "The Devil Wears Prada",
+            "page": "javascript.html",
             "img": 'devil.jpg',
             // "category": ["romance"],
             "time": 2006,
@@ -144,6 +149,7 @@ const items =
         },
         {
             "title": "Flipped",
+            "page": "javascript.html",
             "img": 'flipped2.jpeg',
             // "category": ["romance"],
             "time": 2010,
@@ -228,7 +234,7 @@ function renderItems() {
     const filteredItems = items.filter(item => {
         const condition = showCategory === 'all' ||
             (showCategory === 'selected' && item.selected) ||
-            (showCategory === 'incomplete' && !item.selected);
+            (showCategory === 'notSelected' && !item.selected);
         return item.time >= minTime && condition;
     });
 
@@ -240,8 +246,18 @@ function renderItems() {
 }
 
 function toggleSelected(element) {
-    element.classList.toggle('selected');
+    // Find the index of the item in the items array based on its title
+    const title = element.querySelector('p').textContent;
+    const itemIndex = items.findIndex(item => item.title === title);
+    
+    // Toggle the "selected" property of the item between true and false
+    items[itemIndex].selected = !items[itemIndex].selected;
+
+    // Update the class of the element to reflect the new selection state
+    element.classList.toggle('selected', items[itemIndex].selected);
 }
+
+
 
 function handleSelectedFilterChange() {
     showCategory = filters.selected.value;
@@ -261,4 +277,16 @@ function initializeEventListeners() {
 
 initializeEventListeners();
 renderItems();
+
+function generateItem(item) {
+    const isSelected = item.selected ? 'selected' : '';
+    return `
+        <div class="item ${isSelected}" onclick="toggleSelected(this)">
+            ${item.img ? `<img src="imgs/${item.img}" alt="${item.title}" style="${isSelected ? 'filter: drop-shadow(3px 3px 3px red);' : ''}">` : ''}
+            <p>${item.title} (${item.time}) </p>
+            ${item.category ? item.category.map(tag => `<span>${tag}</span>`).join('') : ''}
+            ${item.page ? `<a href="./pages/${item.page}">⊕</a>` : ''}
+        </div>
+    `;
+}
 

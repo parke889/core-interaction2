@@ -6,14 +6,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <script defer src="main.js"></script>
-
+    <style>
+        :root {
+            --column-width: 33.333333333333;
+        }
+    </style>
 
 </head>
+
+
 <body>
     <main>
         <div class="mosaic">
             <section class="mosaic-segment" data-depth="0" data-axis="x" data-count="3" style="--h: 100vh; --w: 100vw;">
-                <div style="--h: 100vh;  --w: 33.333333333333vw;">
+                <div class=column-one style="--h: 100vh;  --w: 33.333333333333vw;">
         <section class="mosaic-segment"  data-axis="y" data-count="1" style="--h: 100vh; --w: 33.333333333333vw;">
                 <div style="--h: 100vh;  --w: 33.333333333333vw;">
                     
@@ -67,7 +73,7 @@
         </section>
                 </div>
 
-                <div style="--h: 100vh;  --w: 33.333333333333vw;">
+                <div class=column-two style="--h: 100vh;  --w: 33.333333333333vw;">
                     <section class="mosaic-segment" data-depth="1" data-axis="y" data-count="2" style="--h: 100vh; --w: 33.333333333333vw;">
                             <div style="--h: 75vh;  --w: 33.333333333333vw;">
                     <section class="mosaic-segment" data-depth="2" data-axis="y" data-count="1" style="--h: 50vh; --w: 33.333333333333vw;">
@@ -128,10 +134,10 @@
                     </section>
                             </div>
                     </section>
-                            </div>
+                </div>
 
 
-                <div style="--h: 100vh;  --w: 33.333333333333vw;">
+                <div class=column-three style="--h: 100vh;  --w: 33.333333333333vw;">
         <section class="mosaic-segment" data-depth="1" data-axis="y" data-count="2" style="--h: 100vh; --w: 33.333333333333vw;">
                 <div style="--h: 75vh;  --w: 33.333333333333vw;">
         <section class="mosaic-segment" data-depth="2" data-axis="x" data-count="1" style="--h: 50vh; --w: 33.333333333333vw;">
@@ -329,8 +335,8 @@
                     <label for="selected-filter">Show:</label>
                     <select id="selected-filter">
                         <option value="all">All</option>
-                        <option value="completed">Selected</option>
-                        <option value="incomplete">Not Selected</option>
+                        <option value="selected">multiple images</option>
+                        <option value="notSelected">one image</option>
                     </select>
                 </div>
                 <div class="row-flexbox">
@@ -347,3 +353,8 @@
     
 </body>
 </html>
+
+
+
+
+    

@@ -357,3 +357,13 @@ a {
     color: red;
 }
 
+@media (max-width: 768px) {
+    .mosaic {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mosaic-segment {
+        width: calc(var(--column-width) * 100%);
+    }
+}
