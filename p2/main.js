@@ -118,6 +118,7 @@ const items =
         {
             "title": "Titanic",
             "img": 'titanic.jpg',
+            "page": "page.html",
             // "category": ["thriller"],
             "time": 1997,
             "selected": false
@@ -291,4 +292,39 @@ function generateItem(item) {
         </div>
     `;
 }
+
+// Select the popup and info elements
+const popup = document.querySelector('.popup');
+const infoContainer = document.querySelector('.info');
+
+// Add click event listeners to each image
+itemImages.forEach(image => {
+    image.addEventListener('click', () => {
+        // Retrieve the index of the clicked item from the data-info attribute
+        const dataIndex = image.parentElement.getAttribute('data-info');
+        const selectedItem = items[dataIndex];
+
+        // Generate HTML to display the item's information
+        const infoHTML = `
+            <h2>${selectedItem.title}</h2>
+            <p>Time: ${selectedItem.time}</p>
+            <p>Page: ${selectedItem.page ? selectedItem.page : 'N/A'}</p>
+            ${selectedItem.category ? `<p>Category: ${selectedItem.category.join(', ')}</p>` : ''}
+        `;
+
+        // Update the info container with the generated HTML
+        infoContainer.innerHTML = infoHTML;
+
+        // Show the popup
+        popup.style.display = 'block';
+    });
+});
+
+// Function to close the popup when clicked outside
+window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+        popup.style.display = 'none';
+    }
+});
+
 
