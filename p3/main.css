@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #000000;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+    z-index: 2;
+}
+
+.hand {
+    position: relative; /* Changed to relative */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i {
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
+
+/* Added shadow styling */
+.hand .shadow {
+    position: absolute;
+    width: 4px;
+    height: var(--h);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Gradient */
+    bottom: calc(-1 * var(--h)); /* Positioning */
+    left: 0; /* Positioning */
+    z-index: -1; /* Behind the hour hand */
+}
+
+
+/* Add styling for hour circle */
+.hour-circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    bottom: calc(var(--h) - 5px); /* Position it at the end of the hour bar */
+    left: -3px; /* Adjust position to align with the hour bar */
+    z-index: 1; /* Above the shadow */
+}
