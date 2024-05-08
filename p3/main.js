@@ -11,11 +11,6 @@ function displayTime(){
     // Getting hour, mins, secs from date
     let hh = date.getHours();
 
-    // Convert 24-hour format to 12-hour format
-    if (hh > 12) {
-        hh = hh - 12;
-    }
-
     // Check if hour is between 6 am and 6 pm
     let isDayTime = hh >= 6 && hh < 18;
 
