@@ -17,14 +17,21 @@ body {
 
 .container {
     position: relative;
+    border-radius: 50%;
+    width: 47rem;
+    height: 47rem;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock {
-    width: 400px;
-    height: 400px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9);
+    width: 35rem;
+    height: 35rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +40,7 @@ body {
 .clock span {
     position: absolute;
     transform: rotate(calc(30deg * var(--i)));
-    inset: 12px;
+    inset: 2px;
     text-align: center;
 }
 
@@ -63,9 +70,24 @@ body {
 .hand i {
     position: absolute;
     background-color: var(--clr);
-    width: 4px;
+    opacity: 0;
+    width: 2px;
     height: var(--h);
     border-radius: 8px;
+}
+
+.hand span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: -12px;
+    text-align: center;
+}
+
+.hours {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 100px;
+    text-align: center;   
 }
 
 /* Added shadow styling */
@@ -79,15 +101,95 @@ body {
     z-index: -1; /* Behind the hour hand */
 }
 
-
 /* Add styling for hour circle */
 .hour-circle {
+    filter: drop-shadow(1px 1px 5px rgb(255, 255, 255));
+
     position: absolute;
     width: 20px;
     height: 20px;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;
-    bottom: calc(var(--h) - 5px); /* Position it at the end of the hour bar */
+    bottom: calc(var(--h) - 70px); /* Position it at the end of the hour bar */
     left: -3px; /* Adjust position to align with the hour bar */
     z-index: 1; /* Above the shadow */
+}
+
+.second-circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--clr);
+    border-radius: 50%;
+    bottom: calc(var(--h) - 5px); /* Position it at the end of the second bar */
+    left: -3px; /* Adjust position to align with the hour bar */
+}
+
+.hand .sec-shadow {
+    position: absolute;
+    width: 10px;
+    height: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.394), rgba(0, 0, 0, 0)); /* Gradient */
+    bottom: calc(1 * var(--h)); /* Positioning */
+    left: 0; /* Positioning */
+    z-index: -1; /* Behind the hour hand */
+}
+.title {
+    padding-top: 3rem;
+    padding-left: 8rem;
+    position: absolute;
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.391);
+    backdrop-filter: blur(10.5px);
+}
+.letthere{
+    line-height: 10rem;
+    font-size: 10rem;
+    color: white;
+    font-family: "Moirai One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    filter: drop-shadow(1px 1px 5px rgb(255, 255, 255));
+}
+.belight{
+    line-height: 10rem;
+    font-size: 10rem;
+    padding-left: 12rem;
+    color: white;
+    font-family: "Moirai One", system-ui;
+    font-weight: 1000;
+    font-style: normal;
+    filter: drop-shadow(1px 1px 5px rgb(255, 255, 255));
+
+}
+
+
+.subtitle{
+    position: relative;
+    bottom: -3rem;
+    right:3rem;
+    font-size: 2em;
+    color: white;
+    font-family: "Moirai One", system-ui;
+    font-weight: 1000;
+    font-style: normal;
+    filter: drop-shadow(1px 1px 5px rgb(255, 255, 255));
+}
+
+.clouds{
+    position: absolute;
+    top: 20px;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.whitecloud{
+    position: relative;
+    width: .1px;
+    height: .1px;
+    opacity: .3;
 }

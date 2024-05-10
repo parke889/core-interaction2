@@ -5,12 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
-    <title>let there be light</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap" rel="stylesheet">
+        <title>let there be light</title>
   </head>
 
   <body>
+    <div class="title">
+      <div class="letthere">
+        Let There
+      </div> 
+      <div class="belight">
+        Be Light
+      </div>
+      <div class="subtitle">
+        24h sundial
+      </div>
+    </div>
+
+    <div class="clouds">
+      <img class="whitecloud" src="cloud.png" alt="">
+    </div>
+
+
+
     <div class="container">
+      <span class="hours" style="--i: 3"><b>18</b></span>
+      <span class="hours" style="--i: 6"><b>24</b></span>
+      <span class="hours" style="--i: 9"><b>6</b></span>
+      <span class="hours" style="--i: 12"><b>12</b></span>
+
+      <span class="hours" style="--i: .5">│</span>
+      <span class="hours" style="--i: 1"><b>│</b></span>
+      <span class="hours" style="--i: 1.5"><b>│</b></span>
+      <span class="hours" style="--i: 2"><b>│</b></span>
+      <span class="hours" style="--i: 2.5"><b>│</b></span>
+      <span class="hours" style="--i: 3.5"><b>│</b></span>
+      <span class="hours" style="--i: 4.5"><b>│</b></span>
+      <span class="hours" style="--i: 5.5"><b>│</b></span>
+      <span class="hours" style="--i: 6.5"><b>│</b></span>
+      <span class="hours" style="--i: 7.5"><b>│</b></span>
+      <span class="hours" style="--i: 8.5"><b>│</b></span>
+      <span class="hours" style="--i: 9.5"><b>│</b></span>
+      <span class="hours" style="--i: 10.5"><b>│</b></span>
+      <span class="hours" style="--i: 11.5"><b>│</b></span>
+      <span class="hours" style="--i: 4"><b>│</b></span>
+      <span class="hours" style="--i: 5"><b>│</b></span>
+      <span class="hours" style="--i: 7"><b>│</b></span>
+      <span class="hours" style="--i: 8"><b>│</b></span>
+      <span class="hours" style="--i: 10"><b>│</b></span>
+      <span class="hours" style="--i: 11"><b>│</b></span>
+
       <div class="clock">
+        <span style="--i: 3"><b>.</b></span>
+        <span style="--i: 6"><b>.</b></span>
+        <span style="--i: 9"><b>.</b></span>
+        <span style="--i: 12"><b>.</b></span>
+
         <div style="--clr: #ff000000; --h: 374px" id="hour" class="hand">
             <i></i>
             <div class="shadow"></div> <!-- Add shadow here -->
@@ -19,16 +71,18 @@
         <div style="--clr: #00000000; --h: 220px" id="min" class="hand">
           <i></i>
         </div>
-        <div style="--clr: #ffffff; --h: 394px" id="sec" class="hand">
+        <div style="--clr: #ffffff; --h: 374px" id="sec" class="hand">
           <i></i>
+          <div class="sec-shadow"></div> <!-- Add shadow here -->
+          <div class="second-circle"></div> <!-- Add hour circle here -->
+
+          
         </div>
 
-        <span style="--i: 3"><b>·</b></span>
-        <span style="--i: 6"><b>·</b></span>
-        <span style="--i: 9"><b>·</b></span>
-        <span style="--i: 12"><b>·</b></span>
       </div>
+
     </div>
+
 
     <script src="main.js"></script>
   </body>
